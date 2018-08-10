@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+	  <h2 class="text-white">Inventario</h2>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" ng-click="reportes()"><h4>Reportes</h4></a>
+      </li>
+    </ul>
+    <div class="my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button">Exit</button>
+	</div>
+  </div>
+</nav>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Referencia</th>
+	  <th scope="col">Código</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="data in array">
+      <th scope="row">{{data.id}}</th>
+	  <th>{{data.nombre}}</th>
+	  <th>{{data.referencia}}}</th>
+	  <th>{{data.codigo}}</th>
+	  <th>{{data.descripcion}}</th>
+	  <th>{{data.estado}}</th>
+	  <th>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button">X</button>
+	  </th>
+    </tr>
+  </tbody>
+</table>
